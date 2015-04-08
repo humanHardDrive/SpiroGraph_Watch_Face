@@ -185,14 +185,19 @@ public class SpiroFace extends CanvasWatchFaceService {
             if (!mAmbient) {
             }
 
+            mHandPaint.setARGB(255, 100, 100, 100);
+
+            canvas.drawCircle(centerX, centerY, 75, mHandPaint);
+            canvas.drawCircle(centerX, centerY, 125, mHandPaint);
+
+            mHandPaint.setARGB(255, 255, 255, 255);
+
             canvas.drawLine(centerX, centerY, hrCircleCenterX, hrCircleCenterY, mHandPaint);
             canvas.drawLine(hrCircleCenterX, hrCircleCenterY, minCircleCenterX, minCircleCenterY, mHandPaint);
             canvas.drawCircle(hrCircleCenterX, hrCircleCenterY, 10, mBackgroundPaint);
             canvas.drawCircle(hrCircleCenterX, hrCircleCenterY, 10, mHandPaint);
             canvas.drawCircle(minCircleCenterX, minCircleCenterY, 10, mBackgroundPaint);
             canvas.drawCircle(minCircleCenterX, minCircleCenterY, 10, mHandPaint);
-            canvas.drawCircle(hrCircleCenterX, hrCircleCenterY, 75, mHandPaint);
-            canvas.drawCircle(minCircleCenterX, minCircleCenterY, 125, mHandPaint);
         }
 
         @Override
